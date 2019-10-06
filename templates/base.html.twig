@@ -3,11 +3,36 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('css/mystyle.css') }}" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light verde-suave">
+                <a href="#" class="navbar-brand">
+                    <img src="/images/icons/logo.png" >
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="{{ path('inicio') }}" class="nav-item nav-link text-dark"><b>Talleres Para El Autoconocimiento</b></a>
+                    </div>
+                    <div class="navbar-nav ml-auto">
+                        <a href="#" class="nav-item nav-link active">Inicio</a>
+                        <a href="#" class="nav-item nav-link">Blog</a>
+                        <a href="#" class="nav-item nav-link">Sobre Nosotras</a>
+                        <a href="#" class="nav-item nav-link" tabindex="-1">Contacto</a>
+                        
+                    </div>
+                </div>
+            </nav> 
+        
         {% block body %}{% endblock %}
+        </div>
         {% block javascripts %}{% endblock %}
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

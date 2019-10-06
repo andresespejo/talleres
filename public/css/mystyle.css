@@ -1,0 +1,16 @@
+body {
+    background-color: #efefef;
+}
+
+.verde-suave {
+    background-color: #c6fea0;
+}
+
+.titulo-taller {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.sin-pad-left {
+    padding-left: 0px;
+}

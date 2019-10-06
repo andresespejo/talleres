@@ -1,47 +1,24 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="container">
-        <header class="blog-header py-3">
-            <div class="row flex-nowrap justify-content-between align-items-center">
-                <div class="col-1 pt-1">
-                    <a class="navbar-brand" href="{{ path('inicio') }}"><img src="images/icons/logo.png">Talleres Para El Autoconocimiento</a>       
-                    
-                </div>
-                <div class="col-6 text-left">
-                    <a class="blog-header-logo text-dark text-decoration-none" href="{{ path('inicio') }}"></a>
-                </div>
-                <div class="col-5 text-left">
-                <nav class="navbar navbar-expand-xl navbar-light">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Sobre Nosotras</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contacto</a>
-                            </li>
-                        </ul>
-                    </div>
-                    </nav>
-                </div>
+        <h4>Próximos Talleres:</h4>
+        <div class="container bg-white pt-2 pb-3">
+            <div class="titulo-taller text-dark">NUESTROS MIEDOS</div> 
+            <div class="col-12 d-flex justify-content-start align-items-center sin-pad-left">
+                <img src="/images/icons/calendario.png" >
+                <small class="text-muted pl-2">18 de Septiembre a las 18:45</small>
             </div>
-        
-        </header>
-        <h1>Let's Explore Symfony 4</h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum sapien mauris, venenatis
-            facilisis neque tincidunt vel. Maecenas vel felis vel turpis scelerisque eleifend. Fusce nec purus egestas,
-            efficitur nisi ac, ultrices nulla. Pellentesque eu mollis tortor, in mollis nisl. Maecenas rhoncus quam non
-            lacinia mollis.</p>
-    </div>
+            <div class="text-dark pt-3"><p>Ni me Explico ni me Entiendo
+            Es un taller que de forma amena, descubrirás cuáles son tus miedos, esos que te impiden crecer y ser feliz.
+            Te permitirá conocerte, comprenderte y cuidarte mejor. Aprenderás a relacionarte con tus emociones desde un lugar más efectivo y sano. Realizaremos prácticas de relajación que te ayudarán a introducir mayor serenidad en tu vida. Haremos visualizaciones que te aportarán claridad a esas dudas que no te permiten avanzar. Te daremos herramientas para tomar consciencia de tus temores y crear buenos hábitos para que te cuides mental y emocionalmente.
+            </p>
+            </div>
+            <div class="col-12 d-flex justify-content-end  sin-pad-left text-dark">
+                
+                <a href="" class="text-dark"><img src="/images/icons/mas_info.png" class="pr-2"><small class="text-dark"><b>Más Información</b></small></a>
+                
+            </div>
+        </div>
+    
 
 {% endblock %}
