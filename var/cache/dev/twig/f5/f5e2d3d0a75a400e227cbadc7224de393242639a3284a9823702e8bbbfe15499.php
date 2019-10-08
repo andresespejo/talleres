@@ -44,6 +44,11 @@ class __TwigTemplate_4069c90e5dd1a5763d838539704e1264a9ea38a47f9f5f894dfb257bb41
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "inicio/inicio.html.twig"));
 
+        if ($this->env->isDebug()) {
+            // line 3
+            \Symfony\Component\VarDumper\VarDumper::dump((isset($context["talleres"]) || array_key_exists("talleres", $context) ? $context["talleres"] : (function () { throw new RuntimeError('Variable "talleres" does not exist.', 3, $this->source); })()));
+        }
+        // line 1
         $this->parent = $this->loadTemplate("base.html.twig", "inicio/inicio.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -54,7 +59,7 @@ class __TwigTemplate_4069c90e5dd1a5763d838539704e1264a9ea38a47f9f5f894dfb257bb41
 
     }
 
-    // line 3
+    // line 6
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -64,42 +69,51 @@ class __TwigTemplate_4069c90e5dd1a5763d838539704e1264a9ea38a47f9f5f894dfb257bb41
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 4
-        echo "        <h1>Próximos Talleres:</h1>
-        <div class=\"container bg-white pt-2 pb-3\">
-            <div class=\"titulo-taller text-dark\">NUESTROS MIEDOS</div> 
-            <div class=\"col-12 d-flex justify-content-start align-items-center sin-pad-left\">
-                <img src=\"/images/icons/calendario.png\" >
-                <small class=\"text-muted pl-2\">18 de Septiembre a las 18:45</small>
-            </div>
-            <div class=\"text-dark pt-3\"><p>Ni me Explico ni me Entiendo
-            Es un taller que de forma amena, descubrirás cuáles son tus miedos, esos que te impiden crecer y ser feliz.
-            Te permitirá conocerte, comprenderte y cuidarte mejor. Aprenderás a relacionarte con tus emociones desde un lugar más efectivo y sano. Realizaremos prácticas de relajación que te ayudarán a introducir mayor serenidad en tu vida. Haremos visualizaciones que te aportarán claridad a esas dudas que no te permiten avanzar. Te daremos herramientas para tomar consciencia de tus temores y crear buenos hábitos para que te cuides mental y emocionalmente.
-            </p>
-            </div>
-            <div class=\"col-12 d-flex justify-content-end  sin-pad-left text-dark\">
-                
-                <a href=\"\" class=\"text-dark\"><img src=\"/images/icons/mas_info.png\" class=\"pr-2\"><small class=\"text-dark\"><b>Más Información</b></small></a>
-                
-            </div>
+        // line 7
+        echo "
+<h1>Próximos Talleres:</h1>
+
+";
+        // line 10
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["talleres"]) || array_key_exists("talleres", $context) ? $context["talleres"] : (function () { throw new RuntimeError('Variable "talleres" does not exist.', 10, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["taller"]) {
+            echo "   
+
+    <div class=\"container bg-white pt-2 pb-3 mb-4\">
+        <div class=\"titulo-taller text-dark\">";
+            // line 13
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "titulo", [], "any", false, false, false, 13), "html", null, true);
+            echo "</div> 
+        <div class=\"col-12 d-flex justify-content-start align-items-center sin-pad-left\">
+            <img src=\"/images/icons/calendario.png\" >
+            <small class=\"text-muted pl-2\">";
+            // line 16
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "fecha", [], "any", false, false, false, 16), "d-m-Y H:i"), "html", null, true);
+            echo "</small>
         </div>
-        <div class=\"container bg-white pt-2 pb-3\">
-            <div class=\"titulo-taller text-dark\">NUESTROS MIEDOS</div> 
-            <div class=\"col-12 d-flex justify-content-start align-items-center sin-pad-left\">
-                <img src=\"/images/icons/calendario.png\" >
-                <small class=\"text-muted pl-2\">18 de Septiembre a las 18:45</small>
-            </div>
-            <div class=\"text-dark pt-3\"><p>Ni me Explico ni me Entiendo
-            Es un taller que de forma amena, descubrirás cuáles son tus miedos, esos que te impiden crecer y ser feliz.
-            Te permitirá conocerte, comprenderte y cuidarte mejor. Aprenderás a relacionarte con tus emociones desde un lugar más efectivo y sano. Realizaremos prácticas de relajación que te ayudarán a introducir mayor serenidad en tu vida. Haremos visualizaciones que te aportarán claridad a esas dudas que no te permiten avanzar. Te daremos herramientas para tomar consciencia de tus temores y crear buenos hábitos para que te cuides mental y emocionalmente.
-            </p>
-            </div>
-            <div class=\"col-12 d-flex justify-content-end  sin-pad-left text-dark\">
-                
-                <a href=\"\" class=\"text-dark\"><img src=\"/images/icons/mas_info.png\" class=\"pr-2\"><small class=\"text-dark\"><b>Más Información</b></small></a>
-                
-            </div>
+        <div class=\"text-dark pt-3\">
+            <p>";
+            // line 19
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "descripcion", [], "any", false, false, false, 19), "html", null, true);
+            echo "</p>
         </div>
+        <div class=\"col-12 d-flex justify-content-end  sin-pad-left text-dark\">
+            
+            <a href=\"\" class=\"text-dark\"><img src=\"/images/icons/mas_info.png\" class=\"pr-2\"><small class=\"text-dark\"><b>Más Información</b></small></a>
+            
+        </div>
+    </div>
+    
+
+";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['taller'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 30
+        echo "
+
     
 
 ";
@@ -123,49 +137,42 @@ class __TwigTemplate_4069c90e5dd1a5763d838539704e1264a9ea38a47f9f5f894dfb257bb41
 
     public function getDebugInfo()
     {
-        return array (  68 => 4,  58 => 3,  35 => 1,);
+        return array (  115 => 30,  98 => 19,  92 => 16,  86 => 13,  78 => 10,  73 => 7,  63 => 6,  52 => 1,  49 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
+{% dump talleres %}
+
+
 {% block body %}
-        <h1>Próximos Talleres:</h1>
-        <div class=\"container bg-white pt-2 pb-3\">
-            <div class=\"titulo-taller text-dark\">NUESTROS MIEDOS</div> 
-            <div class=\"col-12 d-flex justify-content-start align-items-center sin-pad-left\">
-                <img src=\"/images/icons/calendario.png\" >
-                <small class=\"text-muted pl-2\">18 de Septiembre a las 18:45</small>
-            </div>
-            <div class=\"text-dark pt-3\"><p>Ni me Explico ni me Entiendo
-            Es un taller que de forma amena, descubrirás cuáles son tus miedos, esos que te impiden crecer y ser feliz.
-            Te permitirá conocerte, comprenderte y cuidarte mejor. Aprenderás a relacionarte con tus emociones desde un lugar más efectivo y sano. Realizaremos prácticas de relajación que te ayudarán a introducir mayor serenidad en tu vida. Haremos visualizaciones que te aportarán claridad a esas dudas que no te permiten avanzar. Te daremos herramientas para tomar consciencia de tus temores y crear buenos hábitos para que te cuides mental y emocionalmente.
-            </p>
-            </div>
-            <div class=\"col-12 d-flex justify-content-end  sin-pad-left text-dark\">
-                
-                <a href=\"\" class=\"text-dark\"><img src=\"/images/icons/mas_info.png\" class=\"pr-2\"><small class=\"text-dark\"><b>Más Información</b></small></a>
-                
-            </div>
+
+<h1>Próximos Talleres:</h1>
+
+{% for taller in talleres %}   
+
+    <div class=\"container bg-white pt-2 pb-3 mb-4\">
+        <div class=\"titulo-taller text-dark\">{{ taller.titulo }}</div> 
+        <div class=\"col-12 d-flex justify-content-start align-items-center sin-pad-left\">
+            <img src=\"/images/icons/calendario.png\" >
+            <small class=\"text-muted pl-2\">{{ taller.fecha|date('d-m-Y H:i') }}</small>
         </div>
-        <div class=\"container bg-white pt-2 pb-3\">
-            <div class=\"titulo-taller text-dark\">NUESTROS MIEDOS</div> 
-            <div class=\"col-12 d-flex justify-content-start align-items-center sin-pad-left\">
-                <img src=\"/images/icons/calendario.png\" >
-                <small class=\"text-muted pl-2\">18 de Septiembre a las 18:45</small>
-            </div>
-            <div class=\"text-dark pt-3\"><p>Ni me Explico ni me Entiendo
-            Es un taller que de forma amena, descubrirás cuáles son tus miedos, esos que te impiden crecer y ser feliz.
-            Te permitirá conocerte, comprenderte y cuidarte mejor. Aprenderás a relacionarte con tus emociones desde un lugar más efectivo y sano. Realizaremos prácticas de relajación que te ayudarán a introducir mayor serenidad en tu vida. Haremos visualizaciones que te aportarán claridad a esas dudas que no te permiten avanzar. Te daremos herramientas para tomar consciencia de tus temores y crear buenos hábitos para que te cuides mental y emocionalmente.
-            </p>
-            </div>
-            <div class=\"col-12 d-flex justify-content-end  sin-pad-left text-dark\">
-                
-                <a href=\"\" class=\"text-dark\"><img src=\"/images/icons/mas_info.png\" class=\"pr-2\"><small class=\"text-dark\"><b>Más Información</b></small></a>
-                
-            </div>
+        <div class=\"text-dark pt-3\">
+            <p>{{ taller.descripcion }}</p>
         </div>
+        <div class=\"col-12 d-flex justify-content-end  sin-pad-left text-dark\">
+            
+            <a href=\"\" class=\"text-dark\"><img src=\"/images/icons/mas_info.png\" class=\"pr-2\"><small class=\"text-dark\"><b>Más Información</b></small></a>
+            
+        </div>
+    </div>
+    
+
+{% endfor %}
+
+
     
 
 {% endblock %}", "inicio/inicio.html.twig", "/var/www/html/talleres/templates/inicio/inicio.html.twig");

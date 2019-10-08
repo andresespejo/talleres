@@ -17,8 +17,11 @@ class DefaultController extends AbstractController
      */
     public function index()
     {
+
+        $talleres = $this->getDoctrine()->getRepository(Taller::class)->findAll();
+
         return $this->render('inicio/inicio.html.twig', [
-            'controller_name' => 'DefaultController',
+            'talleres' => $talleres,
         ]);
     }
 
@@ -27,6 +30,8 @@ class DefaultController extends AbstractController
      */
 
     public function salvar(){
+
+        // Ejemplo de como se inserta a la BBDD
 
         $entityManager = $this->getDoctrine()->getManager();
 
