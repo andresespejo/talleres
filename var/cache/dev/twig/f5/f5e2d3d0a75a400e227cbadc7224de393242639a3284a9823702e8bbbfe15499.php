@@ -89,13 +89,15 @@ class __TwigTemplate_4069c90e5dd1a5763d838539704e1264a9ea38a47f9f5f894dfb257bb41
             <img src=\"/images/icons/calendario.png\" >
             <small class=\"text-muted pl-2\">";
             // line 16
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "fecha", [], "any", false, false, false, 16), "d-m-Y H:i"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "fecha", [], "any", false, false, false, 16), "d-m-Y H:i
+            "), "html", null, true);
+            // line 17
             echo "</small>
         </div>
         <div class=\"text-dark pt-3\">
             <p>";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "descripcion", [], "any", false, false, false, 19), "html", null, true);
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "descripcion", [], "any", false, false, false, 20), "html", null, true);
             echo "</p>
         </div>
         <div class=\"col-12 d-flex justify-content-end  sin-pad-left text-dark\">
@@ -111,7 +113,7 @@ class __TwigTemplate_4069c90e5dd1a5763d838539704e1264a9ea38a47f9f5f894dfb257bb41
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['taller'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 30
+        // line 31
         echo "
 
     
@@ -137,7 +139,7 @@ class __TwigTemplate_4069c90e5dd1a5763d838539704e1264a9ea38a47f9f5f894dfb257bb41
 
     public function getDebugInfo()
     {
-        return array (  115 => 30,  98 => 19,  92 => 16,  86 => 13,  78 => 10,  73 => 7,  63 => 6,  52 => 1,  49 => 3,  35 => 1,);
+        return array (  117 => 31,  100 => 20,  95 => 17,  92 => 16,  86 => 13,  78 => 10,  73 => 7,  63 => 6,  52 => 1,  49 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -157,7 +159,8 @@ class __TwigTemplate_4069c90e5dd1a5763d838539704e1264a9ea38a47f9f5f894dfb257bb41
         <div class=\"titulo-taller text-dark\">{{ taller.titulo }}</div> 
         <div class=\"col-12 d-flex justify-content-start align-items-center sin-pad-left\">
             <img src=\"/images/icons/calendario.png\" >
-            <small class=\"text-muted pl-2\">{{ taller.fecha|date('d-m-Y H:i') }}</small>
+            <small class=\"text-muted pl-2\">{{ taller.fecha|date('d-m-Y H:i
+            ') }}</small>
         </div>
         <div class=\"text-dark pt-3\">
             <p>{{ taller.descripcion }}</p>

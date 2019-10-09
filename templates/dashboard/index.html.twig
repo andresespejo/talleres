@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+    <h1>Centro De Control</h1>
+    <div class="container bg-white">
+        <div class="row mt-2 pt-3 pb-3">
+            <div class="col-3">
+                <div class="align-items-center">
+                    <a href="" class="text-dark"><img src="/images/icons/mas_info.png" class="pr-2 pb-1">Añadir Taller</a>
+                </div>                  
+                <a href="" class="text-dark"><img src="/images/icon/edit.svg" alt="">Editar Talleres</a>
+                
+            </div>
+            <div class="col-9">
+                <h4>Datos Nuevo Taller:</h4>
+                <br>
+                {{ form_label(nuevo_taller.titulo, 'Título:', {
+                    'label_attr': {
+                        'class' : 'foo'
+                        }
+                    }) 
+                }}
+                <br>
+                {{ form_widget(nuevo_taller.titulo, {
+                    'attr' : {
+                        'class': 'form-control'
+                        }
+                    }) 
+                }}
+                <br>
+                {{ form_label(nuevo_taller.fecha, 'Fecha:')}}
+                <br>
+                {{ form_widget(nuevo_taller.fecha) }}
+                <br>
+                {{ form_label(nuevo_taller.descripcion, 'Descripción:', {
+                    'label_attr' : {
+                        'class' : 'foo'
+                        }
+                    }) 
+                }}
+                <br>
+                {{ form_widget(nuevo_taller.descripcion, {
+                    'attr' : {
+                        'class' : 'form-control alto-textarea'
+                        }
+                    })
+                }}
+                <br>
+                <div class="text-right">
+                    <input type="submit" value="Crear Nuevo Taller" / class="btn verde-suave text-dark">  
+                </div>
+                  
+            </div>
+        </div>
+    </div>
+{% endblock %}

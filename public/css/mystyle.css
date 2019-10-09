@@ -2,6 +2,12 @@ body {
     background-color: #efefef;
 }
 
+select {
+    background-color: white;
+    margin-right: 4px;
+    padding: 2px;
+}
+
 .verde-suave {
     background-color: #c6fea0;
 }
@@ -13,4 +19,8 @@ body {
 
 .sin-pad-left {
     padding-left: 0px;
+}
+
+.alto-textarea {
+    height: 250px;
 }
