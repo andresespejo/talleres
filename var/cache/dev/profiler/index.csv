@@ -132,3 +132,11 @@ daf5c5,127.0.0.1,GET,http://mamuchi:8080/,1570363865,,200
 8c8e28,127.0.0.1,GET,http://mamuchi:8080/,1570364121,,200
 f38936,127.0.0.1,GET,http://mamuchi:8080/,1570364264,,200
 1eaf33,127.0.0.1,GET,http://mamuchi:8080/,1570364382,,200
+142787,127.0.0.1,GET,http://mamuchi:8080/,1570479688,,200
+6880f6,127.0.0.1,GET,http://mamuchi:8080/favicon.ico,1570479691,96b935,200
+96b935,127.0.0.1,GET,http://mamuchi:8080/favicon.ico,1570479691,,404
+c29ede,127.0.0.1,GET,http://mamuchi:8080/,1570640827,,200
+103977,127.0.0.1,GET,http://mamuchi:8080/favicon.ico,1570640830,7a15ea,200
+7a15ea,127.0.0.1,GET,http://mamuchi:8080/favicon.ico,1570640830,,404
+b0bdf0,127.0.0.1,GET,http://mamuchi:8080/dashboard,1570640833,57362d,200
+57362d,127.0.0.1,GET,http://mamuchi:8080/dashboard,1570640834,,404
