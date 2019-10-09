@@ -93,11 +93,18 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
         // line 34
         $this->displayBlock('body', $context, $blocks);
         // line 35
-        echo "        </div>
+        echo "        <footer class=\"page-footer font-small text-white fondo-gris\">
+
+            <div class=\"footer-copyright text-center py-3\">© 2019 Copyright:
+                <a href=\"https://www.talleresparaelautoconocimiento.com\"> TalleresParaelAutoconocimiento.com</a>
+            </div>
+
+        </footer>
+        </div>
         ";
-        // line 36
+        // line 43
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 37
+        // line 44
         echo "        <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
         <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
@@ -167,7 +174,7 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
 
     }
 
-    // line 36
+    // line 43
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -197,7 +204,7 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
 
     public function getDebugInfo()
     {
-        return array (  171 => 36,  153 => 34,  135 => 8,  116 => 7,  101 => 37,  99 => 36,  96 => 35,  94 => 34,  79 => 22,  64 => 9,  62 => 8,  58 => 7,  54 => 6,  47 => 1,);
+        return array (  178 => 43,  160 => 34,  142 => 8,  123 => 7,  108 => 44,  106 => 43,  96 => 35,  94 => 34,  79 => 22,  64 => 9,  62 => 8,  58 => 7,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -236,6 +243,13 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
             </nav> 
         
         {% block body %}{% endblock %}
+        <footer class=\"page-footer font-small text-white fondo-gris\">
+
+            <div class=\"footer-copyright text-center py-3\">© 2019 Copyright:
+                <a href=\"https://www.talleresparaelautoconocimiento.com\"> TalleresParaelAutoconocimiento.com</a>
+            </div>
+
+        </footer>
         </div>
         {% block javascripts %}{% endblock %}
         <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
