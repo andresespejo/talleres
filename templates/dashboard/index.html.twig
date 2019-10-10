@@ -14,10 +14,12 @@
             </div>
             <div class="col-9 pr-4">
                 <h5>Datos Nuevo Taller:</h5>
+                {{ test }}
                 <br>
+                {{ form_start(nuevo_taller) }}
                 {{ form_label(nuevo_taller.titulo, 'Título:', {
                     'label_attr': {
-                        'class' : 'foo'
+                        'class' : ''
                         }
                     }) 
                 }}
@@ -29,14 +31,21 @@
                     }) 
                 }}
                 <br>
+                <div class="margin-labe">
+                    Fecha:
+                </div>
                 {{ form_widget(nuevo_taller.dia) }}
                 {{ form_widget(nuevo_taller.mes) }}
                 {{ form_widget(nuevo_taller.ano) }}
+                a las: 
+                {{ form_widget(nuevo_taller.hora) }}
+                :
+                {{ form_widget(nuevo_taller.minuto) }}
                 <br>
                 <br>
                 {{ form_label(nuevo_taller.descripcion, 'Descripción:', {
                     'label_attr' : {
-                        'class' : 'foo'
+                        'class' : ''
                         }
                     }) 
                 }}
@@ -47,11 +56,12 @@
                         }
                     })
                 }}
+                
                 <br>
                 <div class="text-right">
-                    <input type="submit" value="Crear Nuevo Taller" / class="btn verde-suave text-dark font-weight-bold">  
+                    <input type="submit" value="Crear Nuevo Taller" class="btn verde-suave text-dark font-weight-bold">  
                 </div>
-                  
+                {{ form_end(nuevo_taller) }}
             </div>
         </div>
     </div>

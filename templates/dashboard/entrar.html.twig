@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+  <div class="bg-white pt-5 pb-5">
+    <body class="text-center">
+        <form class="form-signin fond-gris-suave borde-redondeado">
+        {# <img class="mb-2" src="/images/icons/logo.png" alt=""> #}
+        <h1 class="h3 mb-3 font-weight-bold">Acceder Al Sistema</h1>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
+        <br>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+        <br>
+        <div class="checkbox mb-3">
+            <label>
+            <input type="checkbox" value="remember-me"> Recordarme
+            </label>
+        </div>
+        <button class="btn verde-suave text-dark font-weight-bold btn-block" type="submit">Sign in</button>
+        </form>
+    </div>
+
+{% endblock %}

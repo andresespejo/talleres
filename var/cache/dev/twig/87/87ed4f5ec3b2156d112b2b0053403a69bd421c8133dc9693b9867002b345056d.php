@@ -115,9 +115,6 @@ class __TwigTemplate_7d212fcaf443afd7ee93c9a71eee33f30e59fd2aee45ec814515188a7ee
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 31
         echo "
-
-    
-
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -174,9 +171,6 @@ class __TwigTemplate_7d212fcaf443afd7ee93c9a71eee33f30e59fd2aee45ec814515188a7ee
     
 
 {% endfor %}
-
-
-    
 
 {% endblock %}", "inicio/inicio.html.twig", "C:\\xampp\\htdocs\\talleres\\templates\\inicio\\inicio.html.twig");
     }

@@ -18,7 +18,7 @@ class DefaultController extends AbstractController
     public function index()
     {
 
-        $talleres = $this->getDoctrine()->getRepository(Taller::class)->findAll();
+        $talleres = $this->getDoctrine()->getRepository(Taller::class)->findBy([], ['id' => 'DESC']);
 
         return $this->render('inicio/inicio.html.twig', [
             'talleres' => $talleres,
