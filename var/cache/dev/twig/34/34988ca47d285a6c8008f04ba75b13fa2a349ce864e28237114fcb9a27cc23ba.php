@@ -87,7 +87,7 @@ class __TwigTemplate_792fb9cb6d3dea53656ae4f60907715df13de4cd4f32e5f118625662c0a
         // line 6
         echo "  <div class=\"bg-white pt-5 pb-5\">
     <body class=\"text-center\">
-        <form class=\"form-signin fond-gris-suave borde-redondeado\">
+        <form class=\"form-signin fondo-gris-suave borde-redondeado\">
         ";
         // line 10
         echo "        <h1 class=\"h3 mb-3 font-weight-bold\">Acceder Al Sistema</h1>
@@ -139,7 +139,7 @@ class __TwigTemplate_792fb9cb6d3dea53656ae4f60907715df13de4cd4f32e5f118625662c0a
 {% block body %}
   <div class=\"bg-white pt-5 pb-5\">
     <body class=\"text-center\">
-        <form class=\"form-signin fond-gris-suave borde-redondeado\">
+        <form class=\"form-signin fondo-gris-suave borde-redondeado\">
         {# <img class=\"mb-2\" src=\"/images/icons/logo.png\" alt=\"\"> #}
         <h1 class=\"h3 mb-3 font-weight-bold\">Acceder Al Sistema</h1>
         <label for=\"inputEmail\" class=\"sr-only\">Email address</label>

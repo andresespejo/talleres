@@ -10,6 +10,14 @@ select {
     border-radius: .25rem;
 }
 
+.sin-underline {
+    text-decoration: none !important;
+}
+
+.rojo-alerta {
+    color: #ff0018;
+}
+
 .form-signin {
     width: 100%;
     max-width: 330px;
@@ -25,7 +33,7 @@ select {
     margin-bottom: .5rem;
 }
 
-.fond-gris-suave {
+.fondo-gris-suave {
     background-color: #efefef;
 }
 

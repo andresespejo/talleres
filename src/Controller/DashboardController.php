@@ -20,8 +20,19 @@ class DashboardController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/dashboard/editar", name="editar_talleres")
+     */
 
+    public function editar(){
 
+        $talleres = $this->getDoctrine()->getRepository(Taller::class)->findBy([], ['id' => 'DESC']);
+
+        return $this->render('dashboard/editarTalleres.html.twig', [
+            'talleres' => $talleres,
+        ]);
+
+    }
 
 
     /**
