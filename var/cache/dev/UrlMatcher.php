@@ -38,6 +38,7 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
+                .'|/dashboard/eliminar/([^/]++)(*:197)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -47,8 +48,9 @@ return [
         116 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception::showAction'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'], ['token'], null, null, false, false, null]],
-        159 => [
-            [['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null],
+        159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
+        197 => [
+            [['_route' => 'eliminar_taller', '_controller' => 'App\\Controller\\DashboardController::eliminar'], ['idTaller'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

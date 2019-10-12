@@ -1,0 +1,106 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+        clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\Usuarios',
+            ],
+            'namespace' => [
+                'App\\Entity',
+            ],
+            'rootEntityName' => [
+                'App\\Entity\\Usuarios',
+            ],
+            'customRepositoryClassName' => [
+                'App\\Repository\\UsuariosRepository',
+            ],
+            'identifier' => [
+                [
+                    'id',
+                ],
+            ],
+            'generatorType' => [
+                4,
+            ],
+            'fieldMappings' => [
+                [
+                    'id' => [
+                        'fieldName' => 'id',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'id' => true,
+                        'columnName' => 'id',
+                    ],
+                    'username' => [
+                        'fieldName' => 'username',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 255,
+                        'unique' => true,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'username',
+                    ],
+                    'password' => [
+                        'fieldName' => 'password',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 255,
+                        'unique' => true,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'password',
+                    ],
+                    'email' => [
+                        'fieldName' => 'email',
+                        'type' => 'boolean',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'is_active',
+                    ],
+                ],
+            ],
+            'fieldNames' => [
+                [
+                    'id' => 'id',
+                    'username' => 'username',
+                    'password' => 'password',
+                    'is_active' => 'email',
+                ],
+            ],
+            'columnNames' => [
+                [
+                    'id' => 'id',
+                    'username' => 'username',
+                    'password' => 'password',
+                    'email' => 'is_active',
+                ],
+            ],
+            'table' => [
+                [
+                    'name' => 'usuarios',
+                ],
+            ],
+            'idGenerator' => [
+                $o[1],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+);

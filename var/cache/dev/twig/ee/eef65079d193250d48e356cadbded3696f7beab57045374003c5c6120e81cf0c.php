@@ -65,7 +65,7 @@ class __TwigTemplate_ff98970dcd951d2d64fd73978e9d35258410fb69471f71d834a8dbbaf34
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Hello SecurityController!";
+        echo "Acceder Al Sistema";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -85,42 +85,47 @@ class __TwigTemplate_ff98970dcd951d2d64fd73978e9d35258410fb69471f71d834a8dbbaf34
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class=\"example-wrapper\">
+        echo "
 
     ";
-        // line 13
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 13, $this->source); })())) {
-            // line 14
+        // line 8
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 8, $this->source); })())) {
+            // line 9
             echo "        <span class=\"danger\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 14, $this->source); })()), "messageKey", [], "any", false, false, false, 14), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 9, $this->source); })()), "messageKey", [], "any", false, false, false, 9), "html", null, true);
             echo "</span>
     ";
         }
-        // line 16
+        // line 11
         echo "
-    <form action=\"";
-        // line 17
+    <div class=\"bg-white pt-5 pb-5\">
+        <body class=\"text-center\">
+
+        <form class=\"form-signin fondo-gris-suave borde-redondeado\" action=\"";
+        // line 15
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
         echo "\" method=\"POST\">
-    
-        <input type=\"text\" name=\"_username\" value=\"";
+        
+            <h1 class=\"h3 mb-3 font-weight-bold\">Acceder Al Sistema</h1>
+            <label for=\"inputEmail\" class=\"sr-only\">Usuario</label>
+            <input type=\"text\" name=\"_username\" class=\"form-control\" value=\"";
         // line 19
         echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 19, $this->source); })()), "html", null, true);
         echo "\" placeholder=\"Escribe tu usuario\">
+            <br>
+            <label for=\"inputPassword\" class=\"sr-only\">Password</label>
+            <input type=\"password\" name=\"_password\" class=\"form-control\" placeholder=\"Contraseña\">
+            <br>
+            <div class=\"checkbox mb-3\">
+                <label>
+                <input type=\"checkbox\" value=\"remember-me\" checked> Recordarme
+                </label>
+            </div>
+            <button type=\"submit\" class=\"btn verde-suave text-dark font-weight-bold btn-block\">Entrar</button>
 
-        <input type=\"password\" name=\"_password\">
+        </form>
+    </div>
 
-        <button type=\"submit\">Entrar</button>
-
-    </form>
-
-
-</div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -142,39 +147,44 @@ class __TwigTemplate_ff98970dcd951d2d64fd73978e9d35258410fb69471f71d834a8dbbaf34
 
     public function getDebugInfo()
     {
-        return array (  113 => 19,  108 => 17,  105 => 16,  99 => 14,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  113 => 19,  106 => 15,  100 => 11,  94 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello SecurityController!{% endblock %}
+{% block title %}Acceder Al Sistema{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class=\"example-wrapper\">
 
     {% if error %}
         <span class=\"danger\">{{ error.messageKey }}</span>
     {% endif %}
 
-    <form action=\"{{ path('login') }}\" method=\"POST\">
-    
-        <input type=\"text\" name=\"_username\" value=\"{{ last_username }}\" placeholder=\"Escribe tu usuario\">
+    <div class=\"bg-white pt-5 pb-5\">
+        <body class=\"text-center\">
 
-        <input type=\"password\" name=\"_password\">
+        <form class=\"form-signin fondo-gris-suave borde-redondeado\" action=\"{{ path('login') }}\" method=\"POST\">
+        
+            <h1 class=\"h3 mb-3 font-weight-bold\">Acceder Al Sistema</h1>
+            <label for=\"inputEmail\" class=\"sr-only\">Usuario</label>
+            <input type=\"text\" name=\"_username\" class=\"form-control\" value=\"{{ last_username }}\" placeholder=\"Escribe tu usuario\">
+            <br>
+            <label for=\"inputPassword\" class=\"sr-only\">Password</label>
+            <input type=\"password\" name=\"_password\" class=\"form-control\" placeholder=\"Contraseña\">
+            <br>
+            <div class=\"checkbox mb-3\">
+                <label>
+                <input type=\"checkbox\" value=\"remember-me\" checked> Recordarme
+                </label>
+            </div>
+            <button type=\"submit\" class=\"btn verde-suave text-dark font-weight-bold btn-block\">Entrar</button>
 
-        <button type=\"submit\">Entrar</button>
+        </form>
+    </div>
 
-    </form>
-
-
-</div>
 {% endblock %}
 ", "security/login.html.twig", "C:\\xampp\\htdocs\\talleres\\templates\\security\\login.html.twig");
     }

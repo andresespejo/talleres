@@ -25,6 +25,7 @@ class DefaultController extends AbstractController
         ]);
     }
 
+
     /**
      * @Route("/salvar/articulo", name="articulo_nuevo")
      */

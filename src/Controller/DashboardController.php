@@ -7,6 +7,9 @@ use App\Entity\Taller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Symfony\Bundle\FrameworkBundle\Controller\RedirectController;
+use Symfony\Component\HttpFoundation\Response;
 
 class DashboardController extends AbstractController
 {
@@ -34,6 +37,26 @@ class DashboardController extends AbstractController
 
     }
 
+    /**
+     * @Route("/dashboard/eliminar/{idTaller}", name="eliminar_taller")
+     * @Method("GET")
+     */
+
+    public function eliminar($idTaller)
+    {
+
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $taller = $this->getDoctrine()->getRepository(Taller::class)->find($idTaller);
+
+        if ($taller){
+            $entityManager->remove($taller);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('editar_talleres');
+        
+    }
 
     /**
      * @Route("/dashboard", name="dashboard")
@@ -70,6 +93,8 @@ class DashboardController extends AbstractController
 
             $entityManager->persist($taller);
             $entityManager->flush();
+
+            return $this->redirectToRoute('editar_talleres');
 
         }
 

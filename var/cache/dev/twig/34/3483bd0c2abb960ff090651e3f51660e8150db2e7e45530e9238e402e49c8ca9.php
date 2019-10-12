@@ -83,35 +83,58 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
                         <a href=\"#\" class=\"nav-item nav-link active\">Inicio</a>
                         <a href=\"#\" class=\"nav-item nav-link\">Blog</a>
                         <a href=\"#\" class=\"nav-item nav-link\">Sobre Nosotras</a>
-                        <a href=\"#\" class=\"nav-item nav-link\" tabindex=\"-1\">Contacto</a>
-                        <a href=\"";
+                        <a href=\"#\" class=\"nav-item nav-link\">Contacto</a>
+                        ";
         // line 29
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
-        echo "\">Salir</a>
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
+            // line 30
+            echo "
+                            <a href=\"";
+            // line 31
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("dashboard");
+            echo "\" class=\"nav-item nav-link\" tabindex=\"-1\"><img src=\"/images/icons/configurar.png\" ></a>
+
+                        ";
+        } else {
+            // line 34
+            echo "
+                            <a href=\"";
+            // line 35
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("dashboard");
+            echo "\" class=\"nav-item nav-link\" tabindex=\"-1\"><img src=\"/images/icons/configurar.png\" ></a>
+                            
+
+                        ";
+        }
+        // line 39
+        echo "
                         
                     </div>
                 </div>
             </nav> 
         
         ";
-        // line 35
+        // line 45
         $this->displayBlock('body', $context, $blocks);
-        // line 36
+        // line 46
         echo "        <footer class=\"page-footer font-small text-white fondo-gris\">
 
             <div class=\"footer-copyright text-center py-3\">© 2019 Copyright:
-                <a href=\"https://www.talleresparaelautoconocimiento.com\"> TalleresParaelAutoconocimiento.com</a>
+                <a href=\"";
+        // line 49
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inicio");
+        echo "\"> TalleresParaelAutoconocimiento.com</a>
             </div>
 
         </footer>
         </div>
         ";
-        // line 44
+        // line 54
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 45
-        echo "        <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
-        <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
+        // line 55
+        echo "        <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
     </body>
 </html>
 ";
@@ -160,7 +183,7 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
 
     }
 
-    // line 35
+    // line 45
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -178,7 +201,7 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
 
     }
 
-    // line 44
+    // line 54
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -208,7 +231,7 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
 
     public function getDebugInfo()
     {
-        return array (  182 => 44,  164 => 35,  146 => 8,  127 => 7,  112 => 45,  110 => 44,  100 => 36,  98 => 35,  89 => 29,  79 => 22,  64 => 9,  62 => 8,  58 => 7,  54 => 6,  47 => 1,);
+        return array (  205 => 54,  187 => 45,  169 => 8,  150 => 7,  135 => 55,  133 => 54,  125 => 49,  120 => 46,  118 => 45,  110 => 39,  103 => 35,  100 => 34,  94 => 31,  91 => 30,  89 => 29,  79 => 22,  64 => 9,  62 => 8,  58 => 7,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -240,8 +263,18 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
                         <a href=\"#\" class=\"nav-item nav-link active\">Inicio</a>
                         <a href=\"#\" class=\"nav-item nav-link\">Blog</a>
                         <a href=\"#\" class=\"nav-item nav-link\">Sobre Nosotras</a>
-                        <a href=\"#\" class=\"nav-item nav-link\" tabindex=\"-1\">Contacto</a>
-                        <a href=\"{{ path('logout') }}\">Salir</a>
+                        <a href=\"#\" class=\"nav-item nav-link\">Contacto</a>
+                        {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+
+                            <a href=\"{{ path('dashboard') }}\" class=\"nav-item nav-link\" tabindex=\"-1\"><img src=\"/images/icons/configurar.png\" ></a>
+
+                        {% else %}
+
+                            <a href=\"{{ path('dashboard') }}\" class=\"nav-item nav-link\" tabindex=\"-1\"><img src=\"/images/icons/configurar.png\" ></a>
+                            
+
+                        {% endif %}
+
                         
                     </div>
                 </div>
@@ -251,15 +284,15 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
         <footer class=\"page-footer font-small text-white fondo-gris\">
 
             <div class=\"footer-copyright text-center py-3\">© 2019 Copyright:
-                <a href=\"https://www.talleresparaelautoconocimiento.com\"> TalleresParaelAutoconocimiento.com</a>
+                <a href=\"{{ path('inicio') }}\"> TalleresParaelAutoconocimiento.com</a>
             </div>
 
         </footer>
         </div>
         {% block javascripts %}{% endblock %}
-        <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
         <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
     </body>
 </html>
 ", "base.html.twig", "C:\\xampp\\htdocs\\talleres\\templates\\base.html.twig");
