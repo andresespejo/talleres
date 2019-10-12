@@ -84,15 +84,19 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
                         <a href=\"#\" class=\"nav-item nav-link\">Blog</a>
                         <a href=\"#\" class=\"nav-item nav-link\">Sobre Nosotras</a>
                         <a href=\"#\" class=\"nav-item nav-link\" tabindex=\"-1\">Contacto</a>
+                        <a href=\"";
+        // line 29
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
+        echo "\">Salir</a>
                         
                     </div>
                 </div>
             </nav> 
         
         ";
-        // line 34
-        $this->displayBlock('body', $context, $blocks);
         // line 35
+        $this->displayBlock('body', $context, $blocks);
+        // line 36
         echo "        <footer class=\"page-footer font-small text-white fondo-gris\">
 
             <div class=\"footer-copyright text-center py-3\">© 2019 Copyright:
@@ -102,9 +106,9 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
         </footer>
         </div>
         ";
-        // line 43
-        $this->displayBlock('javascripts', $context, $blocks);
         // line 44
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 45
         echo "        <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
         <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
@@ -156,7 +160,7 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
 
     }
 
-    // line 34
+    // line 35
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -174,7 +178,7 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
 
     }
 
-    // line 43
+    // line 44
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -204,7 +208,7 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
 
     public function getDebugInfo()
     {
-        return array (  178 => 43,  160 => 34,  142 => 8,  123 => 7,  108 => 44,  106 => 43,  96 => 35,  94 => 34,  79 => 22,  64 => 9,  62 => 8,  58 => 7,  54 => 6,  47 => 1,);
+        return array (  182 => 44,  164 => 35,  146 => 8,  127 => 7,  112 => 45,  110 => 44,  100 => 36,  98 => 35,  89 => 29,  79 => 22,  64 => 9,  62 => 8,  58 => 7,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -237,6 +241,7 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
                         <a href=\"#\" class=\"nav-item nav-link\">Blog</a>
                         <a href=\"#\" class=\"nav-item nav-link\">Sobre Nosotras</a>
                         <a href=\"#\" class=\"nav-item nav-link\" tabindex=\"-1\">Contacto</a>
+                        <a href=\"{{ path('logout') }}\">Salir</a>
                         
                     </div>
                 </div>
