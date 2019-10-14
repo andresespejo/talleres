@@ -25,6 +25,7 @@ class __TwigTemplate_7d212fcaf443afd7ee93c9a71eee33f30e59fd2aee45ec814515188a7ee
         $this->source = $this->getSourceContext();
 
         $this->blocks = [
+            'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -56,6 +57,25 @@ class __TwigTemplate_7d212fcaf443afd7ee93c9a71eee33f30e59fd2aee45ec814515188a7ee
 
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 4
+    public function block_title($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        echo "Talleres Para El Autoconocimiento";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
     }
 
@@ -101,8 +121,53 @@ class __TwigTemplate_7d212fcaf443afd7ee93c9a71eee33f30e59fd2aee45ec814515188a7ee
             echo "</p>
         </div>
         <div class=\"col-12 d-flex justify-content-end  sin-pad-left text-dark\">
-            
-            <a href=\"\" class=\"text-dark\"><img src=\"/images/icons/mas_info.png\" class=\"pr-2\"><small class=\"text-dark\"><b>Más Información</b></small></a>
+        <div class=\"modal fade\" id=\"exampleModal";
+            // line 23
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "id", [], "any", false, false, false, 23), "html", null, true);
+            echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+            <div class=\"modal-dialog\" role=\"document\">
+                <div class=\"modal-content\">
+                <div class=\"modal-header verde-suave\">
+                    <h5 class=\"modal-title\" id=\"exampleModalLabel\">Solicitar Más Información</h5>
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                    <span aria-hidden=\"true\">&times;</span>
+                    </button>
+                </div>
+                <div class=\"modal-body fondo-gris-suave\">
+                    <div>
+                        ";
+            // line 34
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "titulo", [], "any", false, false, false, 34), "html", null, true);
+            echo ":
+                    </div>                    
+                    <br>
+                    <form action=\"";
+            // line 37
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inicio");
+            echo " form-signin fondo-gris-suave borde-redondeado\">
+                        <label for=\"inputEmail\" class=\"sr-only\">Email address</label>
+                        <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Tu Email\" required autofocus>
+                        <br>
+                        <label for=\"Comentarios\" class=\"sr-only\">Mensaje</label>
+                        <textarea class=\"form-control\" id=\"Comentarios\" rows=\"3\" placeholder=\"Comentarios\"></textarea>
+                    </form>
+                </div>
+                <div class=\"modal-footer\">
+                    <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Cerrar</button>
+                    <a href=\"";
+            // line 47
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("eliminar_taller", ["idTaller" => twig_get_attribute($this->env, $this->source,             // line 48
+$context["taller"], "id", [], "any", false, false, false, 48)]), "html", null, true);
+            // line 50
+            echo "\" class=\"btn verde-suave text-dark\"><b>Enviar</b></a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <a href=\"\" class=\"sin-underline\" data-toggle=\"modal\" data-target=\"#exampleModal";
+            // line 55
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "id", [], "any", false, false, false, 55), "html", null, true);
+            echo "\"><img src=\"/images/icons/mas_info.png\" class=\"pr-2\"><small class=\"text-dark\"><b>Más Información</b></small></a>
             
         </div>
     </div>
@@ -113,7 +178,7 @@ class __TwigTemplate_7d212fcaf443afd7ee93c9a71eee33f30e59fd2aee45ec814515188a7ee
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['taller'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 31
+        // line 62
         echo "
 ";
         
@@ -136,7 +201,7 @@ class __TwigTemplate_7d212fcaf443afd7ee93c9a71eee33f30e59fd2aee45ec814515188a7ee
 
     public function getDebugInfo()
     {
-        return array (  117 => 31,  100 => 20,  95 => 17,  92 => 16,  86 => 13,  78 => 10,  73 => 7,  63 => 6,  52 => 1,  49 => 3,  35 => 1,);
+        return array (  182 => 62,  169 => 55,  162 => 50,  160 => 48,  159 => 47,  146 => 37,  140 => 34,  126 => 23,  120 => 20,  115 => 17,  112 => 16,  106 => 13,  98 => 10,  93 => 7,  83 => 6,  64 => 4,  53 => 1,  50 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -144,7 +209,7 @@ class __TwigTemplate_7d212fcaf443afd7ee93c9a71eee33f30e59fd2aee45ec814515188a7ee
         return new Source("{% extends 'base.html.twig' %}
 
 {% dump talleres %}
-
+{% block title %}Talleres Para El Autoconocimiento{% endblock %}
 
 {% block body %}
 
@@ -163,8 +228,39 @@ class __TwigTemplate_7d212fcaf443afd7ee93c9a71eee33f30e59fd2aee45ec814515188a7ee
             <p>{{ taller.descripcion }}</p>
         </div>
         <div class=\"col-12 d-flex justify-content-end  sin-pad-left text-dark\">
-            
-            <a href=\"\" class=\"text-dark\"><img src=\"/images/icons/mas_info.png\" class=\"pr-2\"><small class=\"text-dark\"><b>Más Información</b></small></a>
+        <div class=\"modal fade\" id=\"exampleModal{{ taller.id }}\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+            <div class=\"modal-dialog\" role=\"document\">
+                <div class=\"modal-content\">
+                <div class=\"modal-header verde-suave\">
+                    <h5 class=\"modal-title\" id=\"exampleModalLabel\">Solicitar Más Información</h5>
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                    <span aria-hidden=\"true\">&times;</span>
+                    </button>
+                </div>
+                <div class=\"modal-body fondo-gris-suave\">
+                    <div>
+                        {{ taller.titulo }}:
+                    </div>                    
+                    <br>
+                    <form action=\"{{ path('inicio') }} form-signin fondo-gris-suave borde-redondeado\">
+                        <label for=\"inputEmail\" class=\"sr-only\">Email address</label>
+                        <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Tu Email\" required autofocus>
+                        <br>
+                        <label for=\"Comentarios\" class=\"sr-only\">Mensaje</label>
+                        <textarea class=\"form-control\" id=\"Comentarios\" rows=\"3\" placeholder=\"Comentarios\"></textarea>
+                    </form>
+                </div>
+                <div class=\"modal-footer\">
+                    <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Cerrar</button>
+                    <a href=\"{{ path('eliminar_taller', {
+                                    'idTaller': taller.id
+                            }) 
+                        }}\" class=\"btn verde-suave text-dark\"><b>Enviar</b></a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <a href=\"\" class=\"sin-underline\" data-toggle=\"modal\" data-target=\"#exampleModal{{ taller.id }}\"><img src=\"/images/icons/mas_info.png\" class=\"pr-2\"><small class=\"text-dark\"><b>Más Información</b></small></a>
             
         </div>
     </div>

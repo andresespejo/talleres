@@ -65,48 +65,42 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
     <body>
         <div class=\"container\">
             <nav class=\"navbar navbar-expand-md navbar-light verde-suave\">
-                <a href=\"#\" class=\"navbar-brand\">
-                    <img src=\"/images/icons/logo.png\" >
+                <a href=\"#\" class=\"navbar-brand\" >
+                    <img src=\"/images/letras_logo.png\" style=\"width: 500px;\">
                 </a>
                 <button type=\"button\" class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\"#navbarCollapse\">
                     <span class=\"navbar-toggler-icon\"></span>
                 </button>
 
                 <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">
-                    <div class=\"navbar-nav\">
-                        <a href=\"";
-        // line 22
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inicio");
-        echo "\" class=\"nav-item nav-link text-dark\"><b>Talleres Para El Autoconocimiento</b></a>
-                    </div>
                     <div class=\"navbar-nav ml-auto\">
                         <a href=\"#\" class=\"nav-item nav-link active\">Inicio</a>
                         <a href=\"#\" class=\"nav-item nav-link\">Blog</a>
                         <a href=\"#\" class=\"nav-item nav-link\">Sobre Nosotras</a>
                         <a href=\"#\" class=\"nav-item nav-link\">Contacto</a>
                         ";
-        // line 29
+        // line 26
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-            // line 30
+            // line 27
             echo "
                             <a href=\"";
-            // line 31
+            // line 28
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("dashboard");
             echo "\" class=\"nav-item nav-link\" tabindex=\"-1\"><img src=\"/images/icons/configurar.png\" ></a>
 
                         ";
         } else {
-            // line 34
+            // line 31
             echo "
                             <a href=\"";
-            // line 35
+            // line 32
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("dashboard");
             echo "\" class=\"nav-item nav-link\" tabindex=\"-1\"><img src=\"/images/icons/configurar.png\" ></a>
                             
 
                         ";
         }
-        // line 39
+        // line 36
         echo "
                         
                     </div>
@@ -114,14 +108,14 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
             </nav> 
         
         ";
-        // line 45
+        // line 42
         $this->displayBlock('body', $context, $blocks);
-        // line 46
+        // line 43
         echo "        <footer class=\"page-footer font-small text-white fondo-gris\">
 
             <div class=\"footer-copyright text-center py-3\">© 2019 Copyright:
                 <a href=\"";
-        // line 49
+        // line 46
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inicio");
         echo "\"> TalleresParaelAutoconocimiento.com</a>
             </div>
@@ -129,9 +123,9 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
         </footer>
         </div>
         ";
-        // line 54
+        // line 51
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 55
+        // line 52
         echo "        <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
         <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
@@ -183,7 +177,7 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
 
     }
 
-    // line 45
+    // line 42
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -201,7 +195,7 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
 
     }
 
-    // line 54
+    // line 51
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -231,7 +225,7 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
 
     public function getDebugInfo()
     {
-        return array (  205 => 54,  187 => 45,  169 => 8,  150 => 7,  135 => 55,  133 => 54,  125 => 49,  120 => 46,  118 => 45,  110 => 39,  103 => 35,  100 => 34,  94 => 31,  91 => 30,  89 => 29,  79 => 22,  64 => 9,  62 => 8,  58 => 7,  54 => 6,  47 => 1,);
+        return array (  199 => 51,  181 => 42,  163 => 8,  144 => 7,  129 => 52,  127 => 51,  119 => 46,  114 => 43,  112 => 42,  104 => 36,  97 => 32,  94 => 31,  88 => 28,  85 => 27,  83 => 26,  64 => 9,  62 => 8,  58 => 7,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -248,17 +242,14 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
     <body>
         <div class=\"container\">
             <nav class=\"navbar navbar-expand-md navbar-light verde-suave\">
-                <a href=\"#\" class=\"navbar-brand\">
-                    <img src=\"/images/icons/logo.png\" >
+                <a href=\"#\" class=\"navbar-brand\" >
+                    <img src=\"/images/letras_logo.png\" style=\"width: 500px;\">
                 </a>
                 <button type=\"button\" class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\"#navbarCollapse\">
                     <span class=\"navbar-toggler-icon\"></span>
                 </button>
 
                 <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">
-                    <div class=\"navbar-nav\">
-                        <a href=\"{{ path('inicio') }}\" class=\"nav-item nav-link text-dark\"><b>Talleres Para El Autoconocimiento</b></a>
-                    </div>
                     <div class=\"navbar-nav ml-auto\">
                         <a href=\"#\" class=\"nav-item nav-link active\">Inicio</a>
                         <a href=\"#\" class=\"nav-item nav-link\">Blog</a>

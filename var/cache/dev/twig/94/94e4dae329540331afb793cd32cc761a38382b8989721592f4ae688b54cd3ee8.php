@@ -99,29 +99,28 @@ class __TwigTemplate_9699c89460bd3101de64512fc63d5e4bfc965878122bca15716d09bc0c9
         $context['_seq'] = twig_ensure_traversable((isset($context["talleres"]) || array_key_exists("talleres", $context) ? $context["talleres"] : (function () { throw new RuntimeError('Variable "talleres" does not exist.', 11, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["taller"]) {
             echo "   
-
                     <div class=\"container bg-white pt-2 pb-2 mb-4 border\">
                         <div class=\"titulo-taller text-dark\">";
-            // line 14
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "titulo", [], "any", false, false, false, 14), "html", null, true);
+            // line 13
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "titulo", [], "any", false, false, false, 13), "html", null, true);
             echo "</div> 
                         <div class=\"col-12 d-flex justify-content-start align-items-center sin-pad-left\">
                             <img src=\"/images/icons/calendario.png\" >
                             <small class=\"text-muted pl-2\">";
-            // line 17
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "fecha", [], "any", false, false, false, 17), "d-m-Y H:i"), "html", null, true);
+            // line 16
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "fecha", [], "any", false, false, false, 16), "d-m-Y H:i"), "html", null, true);
             echo "</small>
                         </div>
                         <div class=\"text-dark pt-3\">
                             <p>";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "descripcion", [], "any", false, false, false, 20), "html", null, true);
+            // line 19
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "descripcion", [], "any", false, false, false, 19), "html", null, true);
             echo "</p>
                         </div>
                         <div class=\"col-12 d-flex justify-content-end sin-pad-left text-dark\">
                             <div class=\"modal fade\" id=\"exampleModal";
-            // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "id", [], "any", false, false, false, 23), "html", null, true);
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "id", [], "any", false, false, false, 22), "html", null, true);
             echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
                                 <div class=\"modal-dialog\" role=\"document\">
                                     <div class=\"modal-content\">
@@ -137,19 +136,18 @@ class __TwigTemplate_9699c89460bd3101de64512fc63d5e4bfc965878122bca15716d09bc0c9
                                     <div class=\"modal-footer\">
                                         <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Cerrar</button>
                                         <a href=\"";
-            // line 37
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("eliminar_taller", ["idTaller" => twig_get_attribute($this->env, $this->source,             // line 38
-$context["taller"], "id", [], "any", false, false, false, 38)]), "html", null, true);
-            // line 40
+            // line 36
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("eliminar_taller", ["idTaller" => twig_get_attribute($this->env, $this->source,             // line 37
+$context["taller"], "id", [], "any", false, false, false, 37)]), "html", null, true);
+            // line 39
             echo "\" class=\"btn btn-danger\">Eliminar</a>
                                     </div>
                                     </div>
                                 </div>
                             </div>
-                            <a href=\"\" class=\"sin-underline\"><img src=\"/images/icons/edita_azul.png\" class=\"pr-2\"><small class=\"text-info\"><b>Editar</b></small></a>
                             <a href=\"\" class=\"sin-underline\" data-toggle=\"modal\" data-target=\"#exampleModal";
-            // line 46
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "id", [], "any", false, false, false, 46), "html", null, true);
+            // line 44
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "id", [], "any", false, false, false, 44), "html", null, true);
             echo "\"><img src=\"/images/icons/eliminar.png\" class=\"pr-2 pl-3\"><small class=\"rojo-alerta\"><b>Eliminar</b></small></a>
                             
                         </div>
@@ -161,7 +159,7 @@ $context["taller"], "id", [], "any", false, false, false, 38)]), "html", null, t
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['taller'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 53
+        // line 51
         echo "            </div>
         </div>
     </div>
@@ -186,7 +184,7 @@ $context["taller"], "id", [], "any", false, false, false, 38)]), "html", null, t
 
     public function getDebugInfo()
     {
-        return array (  165 => 53,  152 => 46,  144 => 40,  142 => 38,  141 => 37,  124 => 23,  118 => 20,  112 => 17,  106 => 14,  98 => 11,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  163 => 51,  150 => 44,  143 => 39,  141 => 37,  140 => 36,  123 => 22,  117 => 19,  111 => 16,  105 => 13,  98 => 11,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -202,7 +200,6 @@ $context["taller"], "id", [], "any", false, false, false, 38)]), "html", null, t
             <div class=\"col-9 pr-4\">
                 <h5>Editar Talleres:</h5>
                 {% for taller in talleres %}   
-
                     <div class=\"container bg-white pt-2 pb-2 mb-4 border\">
                         <div class=\"titulo-taller text-dark\">{{ taller.titulo }}</div> 
                         <div class=\"col-12 d-flex justify-content-start align-items-center sin-pad-left\">
@@ -235,7 +232,6 @@ $context["taller"], "id", [], "any", false, false, false, 38)]), "html", null, t
                                     </div>
                                 </div>
                             </div>
-                            <a href=\"\" class=\"sin-underline\"><img src=\"/images/icons/edita_azul.png\" class=\"pr-2\"><small class=\"text-info\"><b>Editar</b></small></a>
                             <a href=\"\" class=\"sin-underline\" data-toggle=\"modal\" data-target=\"#exampleModal{{ taller.id }}\"><img src=\"/images/icons/eliminar.png\" class=\"pr-2 pl-3\"><small class=\"rojo-alerta\"><b>Eliminar</b></small></a>
                             
                         </div>

@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% dump talleres %}
-
+{% block title %}Talleres Para El Autoconocimiento{% endblock %}
 
 {% block body %}
 
@@ -20,8 +20,39 @@
             <p>{{ taller.descripcion }}</p>
         </div>
         <div class="col-12 d-flex justify-content-end  sin-pad-left text-dark">
-            
-            <a href="" class="text-dark"><img src="/images/icons/mas_info.png" class="pr-2"><small class="text-dark"><b>Más Información</b></small></a>
+        <div class="modal fade" id="exampleModal{{ taller.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header verde-suave">
+                    <h5 class="modal-title" id="exampleModalLabel">Solicitar Más Información</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body fondo-gris-suave">
+                    <div>
+                        {{ taller.titulo }}:
+                    </div>                    
+                    <br>
+                    <form action="{{ path('inicio') }} form-signin fondo-gris-suave borde-redondeado">
+                        <label for="inputEmail" class="sr-only">Email address</label>
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Tu Email" required autofocus>
+                        <br>
+                        <label for="Comentarios" class="sr-only">Mensaje</label>
+                        <textarea class="form-control" id="Comentarios" rows="3" placeholder="Comentarios"></textarea>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <a href="{{ path('eliminar_taller', {
+                                    'idTaller': taller.id
+                            }) 
+                        }}" class="btn verde-suave text-dark"><b>Enviar</b></a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <a href="" class="sin-underline" data-toggle="modal" data-target="#exampleModal{{ taller.id }}"><img src="/images/icons/mas_info.png" class="pr-2"><small class="text-dark"><b>Más Información</b></small></a>
             
         </div>
     </div>

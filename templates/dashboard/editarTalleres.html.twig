@@ -9,7 +9,6 @@
             <div class="col-9 pr-4">
                 <h5>Editar Talleres:</h5>
                 {% for taller in talleres %}   
-
                     <div class="container bg-white pt-2 pb-2 mb-4 border">
                         <div class="titulo-taller text-dark">{{ taller.titulo }}</div> 
                         <div class="col-12 d-flex justify-content-start align-items-center sin-pad-left">
@@ -42,7 +41,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="" class="sin-underline"><img src="/images/icons/edita_azul.png" class="pr-2"><small class="text-info"><b>Editar</b></small></a>
                             <a href="" class="sin-underline" data-toggle="modal" data-target="#exampleModal{{ taller.id }}"><img src="/images/icons/eliminar.png" class="pr-2 pl-3"><small class="rojo-alerta"><b>Eliminar</b></small></a>
                             
                         </div>
