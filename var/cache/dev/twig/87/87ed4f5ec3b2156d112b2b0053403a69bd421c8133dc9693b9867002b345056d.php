@@ -90,40 +90,41 @@ class __TwigTemplate_7d212fcaf443afd7ee93c9a71eee33f30e59fd2aee45ec814515188a7ee
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 7
-        echo "
-<h1>Próximos Talleres:</h1>
-
+        echo "<div id=\"foto-portada\">
+    <img src=\"/images/caras-incial.jpg\" alt=\"\">
+</div>
+<br>
 ";
-        // line 10
+        // line 11
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["talleres"]) || array_key_exists("talleres", $context) ? $context["talleres"] : (function () { throw new RuntimeError('Variable "talleres" does not exist.', 10, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["talleres"]) || array_key_exists("talleres", $context) ? $context["talleres"] : (function () { throw new RuntimeError('Variable "talleres" does not exist.', 11, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["taller"]) {
             echo "   
 
     <div class=\"container bg-white pt-2 pb-3 mb-4\">
         <div class=\"titulo-taller text-dark\">";
-            // line 13
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "titulo", [], "any", false, false, false, 13), "html", null, true);
+            // line 14
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "titulo", [], "any", false, false, false, 14), "html", null, true);
             echo "</div> 
         <div class=\"col-12 d-flex justify-content-start align-items-center sin-pad-left\">
             <img src=\"/images/icons/calendario.png\" >
             <small class=\"text-muted pl-2\">";
-            // line 16
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "fecha", [], "any", false, false, false, 16), "d-m-Y H:i
-            "), "html", null, true);
             // line 17
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "fecha", [], "any", false, false, false, 17), "d-m-Y H:i
+            "), "html", null, true);
+            // line 18
             echo "</small>
         </div>
         <div class=\"text-dark pt-3\">
             <p>";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "descripcion", [], "any", false, false, false, 20), "html", null, true);
+            // line 21
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "descripcion", [], "any", false, false, false, 21), "html", null, true);
             echo "</p>
         </div>
         <div class=\"col-12 d-flex justify-content-end  sin-pad-left text-dark\">
         <div class=\"modal fade\" id=\"exampleModal";
-            // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "id", [], "any", false, false, false, 23), "html", null, true);
+            // line 24
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "id", [], "any", false, false, false, 24), "html", null, true);
             echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
             <div class=\"modal-dialog\" role=\"document\">
                 <div class=\"modal-content\">
@@ -136,13 +137,13 @@ class __TwigTemplate_7d212fcaf443afd7ee93c9a71eee33f30e59fd2aee45ec814515188a7ee
                 <div class=\"modal-body fondo-gris-suave\">
                     <div>
                         ";
-            // line 34
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "titulo", [], "any", false, false, false, 34), "html", null, true);
+            // line 35
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "titulo", [], "any", false, false, false, 35), "html", null, true);
             echo ":
                     </div>                    
                     <br>
                     <form action=\"";
-            // line 37
+            // line 38
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inicio");
             echo " form-signin fondo-gris-suave borde-redondeado\">
                         <label for=\"inputEmail\" class=\"sr-only\">Email address</label>
@@ -155,18 +156,18 @@ class __TwigTemplate_7d212fcaf443afd7ee93c9a71eee33f30e59fd2aee45ec814515188a7ee
                 <div class=\"modal-footer\">
                     <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Cerrar</button>
                     <a href=\"";
-            // line 47
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("eliminar_taller", ["idTaller" => twig_get_attribute($this->env, $this->source,             // line 48
-$context["taller"], "id", [], "any", false, false, false, 48)]), "html", null, true);
-            // line 50
+            // line 48
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("eliminar_taller", ["idTaller" => twig_get_attribute($this->env, $this->source,             // line 49
+$context["taller"], "id", [], "any", false, false, false, 49)]), "html", null, true);
+            // line 51
             echo "\" class=\"btn verde-suave text-dark\"><b>Enviar</b></a>
                 </div>
                 </div>
             </div>
         </div>
         <a href=\"\" class=\"sin-underline\" data-toggle=\"modal\" data-target=\"#exampleModal";
-            // line 55
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "id", [], "any", false, false, false, 55), "html", null, true);
+            // line 56
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "id", [], "any", false, false, false, 56), "html", null, true);
             echo "\"><img src=\"/images/icons/mas_info.png\" class=\"pr-2\"><small class=\"text-dark\"><b>Más Información</b></small></a>
             
         </div>
@@ -178,7 +179,7 @@ $context["taller"], "id", [], "any", false, false, false, 48)]), "html", null, t
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['taller'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 62
+        // line 63
         echo "
 ";
         
@@ -201,7 +202,7 @@ $context["taller"], "id", [], "any", false, false, false, 48)]), "html", null, t
 
     public function getDebugInfo()
     {
-        return array (  182 => 62,  169 => 55,  162 => 50,  160 => 48,  159 => 47,  146 => 37,  140 => 34,  126 => 23,  120 => 20,  115 => 17,  112 => 16,  106 => 13,  98 => 10,  93 => 7,  83 => 6,  64 => 4,  53 => 1,  50 => 3,  36 => 1,);
+        return array (  183 => 63,  170 => 56,  163 => 51,  161 => 49,  160 => 48,  147 => 38,  141 => 35,  127 => 24,  121 => 21,  116 => 18,  113 => 17,  107 => 14,  99 => 11,  93 => 7,  83 => 6,  64 => 4,  53 => 1,  50 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -212,9 +213,10 @@ $context["taller"], "id", [], "any", false, false, false, 48)]), "html", null, t
 {% block title %}Talleres Para El Autoconocimiento{% endblock %}
 
 {% block body %}
-
-<h1>Próximos Talleres:</h1>
-
+<div id=\"foto-portada\">
+    <img src=\"/images/caras-incial.jpg\" alt=\"\">
+</div>
+<br>
 {% for taller in talleres %}   
 
     <div class=\"container bg-white pt-2 pb-3 mb-4\">

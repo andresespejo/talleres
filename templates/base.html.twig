@@ -11,7 +11,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light verde-suave">
                 <a href="#" class="navbar-brand" >
-                    <img src="/images/letras_logo.png" style="width: 500px;">
+                    <img src="/images/letras_logo.png" id="logo-cabecera">
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -23,16 +23,7 @@
                         <a href="#" class="nav-item nav-link">Blog</a>
                         <a href="#" class="nav-item nav-link">Sobre Nosotras</a>
                         <a href="#" class="nav-item nav-link">Contacto</a>
-                        {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
 
-                            <a href="{{ path('dashboard') }}" class="nav-item nav-link" tabindex="-1"><img src="/images/icons/configurar.png" ></a>
-
-                        {% else %}
-
-                            <a href="{{ path('dashboard') }}" class="nav-item nav-link" tabindex="-1"><img src="/images/icons/configurar.png" ></a>
-                            
-
-                        {% endif %}
 
                         
                     </div>
@@ -42,8 +33,19 @@
         {% block body %}{% endblock %}
         <footer class="page-footer font-small text-white fondo-gris">
 
-            <div class="footer-copyright text-center py-3">© 2019 Copyright:
-                <a href="{{ path('inicio') }}"> TalleresParaelAutoconocimiento.com</a>
+            <div class="footer-copyright text-center py-3">
+                <div class="d-flex justify-content-center align-items-center">
+                    © 2019 Copyright: 
+                    <a href="{{ path('inicio') }}" class="verde-suave-letras ml-1"> TalleresParaelAutoconocimiento.com</a>
+                    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+
+                        <a href="{{ path('dashboard') }}" class="nav-item nav-link" tabindex="-1"><img src="/images/icons/configurar.png" ></a>
+
+                    {% else %}
+                        <a href="{{ path('dashboard') }}" class="nav-item nav-link" tabindex="-1"><img src="/images/icons/configurar.png" ></a>
+                        
+                    {% endif %}
+                </div>
             </div>
 
         </footer>
