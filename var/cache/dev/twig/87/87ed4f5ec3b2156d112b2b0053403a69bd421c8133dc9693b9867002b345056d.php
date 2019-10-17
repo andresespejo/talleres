@@ -134,40 +134,51 @@ class __TwigTemplate_7d212fcaf443afd7ee93c9a71eee33f30e59fd2aee45ec814515188a7ee
                     <span aria-hidden=\"true\">&times;</span>
                     </button>
                 </div>
+                ";
+            // line 33
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formulario_taller"]) || array_key_exists("formulario_taller", $context) ? $context["formulario_taller"] : (function () { throw new RuntimeError('Variable "formulario_taller" does not exist.', 33, $this->source); })()), 'form_start');
+            echo "
                 <div class=\"modal-body fondo-gris-suave\">
                     <div>
                         ";
-            // line 35
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "titulo", [], "any", false, false, false, 35), "html", null, true);
+            // line 36
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "titulo", [], "any", false, false, false, 36), "html", null, true);
             echo ":
                     </div>                    
                     <br>
-                    <form action=\"";
-            // line 38
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inicio");
-            echo " form-signin fondo-gris-suave borde-redondeado\">
-                        <label for=\"inputEmail\" class=\"sr-only\">Email address</label>
-                        <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Tu Email\" required autofocus>
-                        <br>
-                        <label for=\"Comentarios\" class=\"sr-only\">Mensaje</label>
-                        <textarea class=\"form-control\" id=\"Comentarios\" rows=\"3\" placeholder=\"Comentarios\"></textarea>
-                    </form>
+                    
+                    ";
+            // line 40
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formulario_taller"]) || array_key_exists("formulario_taller", $context) ? $context["formulario_taller"] : (function () { throw new RuntimeError('Variable "formulario_taller" does not exist.', 40, $this->source); })()), "email", [], "any", false, false, false, 40), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Tu Email"]]);
+            // line 46
+            echo "
+                    <br>          
+                    ";
+            // line 48
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formulario_taller"]) || array_key_exists("formulario_taller", $context) ? $context["formulario_taller"] : (function () { throw new RuntimeError('Variable "formulario_taller" does not exist.', 48, $this->source); })()), "comentario", [], "any", false, false, false, 48), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Comentarios", "rows" => 3]]);
+            // line 55
+            echo "  
+                    ";
+            // line 56
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formulario_taller"]) || array_key_exists("formulario_taller", $context) ? $context["formulario_taller"] : (function () { throw new RuntimeError('Variable "formulario_taller" does not exist.', 56, $this->source); })()), "nombreTaller", [], "any", false, false, false, 56), 'widget', ["attr" => ["class" => "d-none", "value" => twig_get_attribute($this->env, $this->source,             // line 59
+$context["taller"], "titulo", [], "any", false, false, false, 59)]]);
+            // line 62
+            echo "                
                 </div>
                 <div class=\"modal-footer\">
                     <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Cerrar</button>
-                    <a href=\"";
-            // line 48
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("eliminar_taller", ["idTaller" => twig_get_attribute($this->env, $this->source,             // line 49
-$context["taller"], "id", [], "any", false, false, false, 49)]), "html", null, true);
-            // line 51
-            echo "\" class=\"btn verde-suave text-dark\"><b>Enviar</b></a>
+                    <input type=\"submit\" value=\"Enviar\" class=\"btn verde-suave text-dark font-weight-bold\"/>
                 </div>
+                ";
+            // line 68
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formulario_taller"]) || array_key_exists("formulario_taller", $context) ? $context["formulario_taller"] : (function () { throw new RuntimeError('Variable "formulario_taller" does not exist.', 68, $this->source); })()), 'form_end');
+            echo "
                 </div>
             </div>
         </div>
         <a href=\"\" class=\"sin-underline\" data-toggle=\"modal\" data-target=\"#exampleModal";
-            // line 56
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "id", [], "any", false, false, false, 56), "html", null, true);
+            // line 72
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["taller"], "id", [], "any", false, false, false, 72), "html", null, true);
             echo "\"><img src=\"/images/icons/mas_info.png\" class=\"pr-2\"><small class=\"text-dark\"><b>Más Información</b></small></a>
             
         </div>
@@ -179,7 +190,7 @@ $context["taller"], "id", [], "any", false, false, false, 49)]), "html", null, t
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['taller'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 63
+        // line 79
         echo "
 ";
         
@@ -202,7 +213,7 @@ $context["taller"], "id", [], "any", false, false, false, 49)]), "html", null, t
 
     public function getDebugInfo()
     {
-        return array (  183 => 63,  170 => 56,  163 => 51,  161 => 49,  160 => 48,  147 => 38,  141 => 35,  127 => 24,  121 => 21,  116 => 18,  113 => 17,  107 => 14,  99 => 11,  93 => 7,  83 => 6,  64 => 4,  53 => 1,  50 => 3,  36 => 1,);
+        return array (  194 => 79,  181 => 72,  174 => 68,  166 => 62,  164 => 59,  163 => 56,  160 => 55,  158 => 48,  154 => 46,  152 => 40,  145 => 36,  139 => 33,  127 => 24,  121 => 21,  116 => 18,  113 => 17,  107 => 14,  99 => 11,  93 => 7,  83 => 6,  64 => 4,  53 => 1,  50 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -239,26 +250,42 @@ $context["taller"], "id", [], "any", false, false, false, 49)]), "html", null, t
                     <span aria-hidden=\"true\">&times;</span>
                     </button>
                 </div>
+                {{ form_start(formulario_taller) }}
                 <div class=\"modal-body fondo-gris-suave\">
                     <div>
                         {{ taller.titulo }}:
                     </div>                    
                     <br>
-                    <form action=\"{{ path('inicio') }} form-signin fondo-gris-suave borde-redondeado\">
-                        <label for=\"inputEmail\" class=\"sr-only\">Email address</label>
-                        <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Tu Email\" required autofocus>
-                        <br>
-                        <label for=\"Comentarios\" class=\"sr-only\">Mensaje</label>
-                        <textarea class=\"form-control\" id=\"Comentarios\" rows=\"3\" placeholder=\"Comentarios\"></textarea>
-                    </form>
+                    
+                    {{ form_widget(formulario_taller.email, {
+                        'attr' : {
+                            'class': 'form-control',
+                            'placeholder' : 'Tu Email'
+                            }
+                        }) 
+                    }}
+                    <br>          
+                    {{ form_widget(formulario_taller.comentario, {
+                        'attr' : {
+                            'class': 'form-control',
+                            'placeholder' : 'Comentarios',
+                            'rows' : 3
+                            }
+                        }) 
+                    }}  
+                    {{ form_widget(formulario_taller.nombreTaller, {
+                        'attr' : {
+                            'class': 'd-none',
+                            'value' : taller.titulo
+                            }
+                        }) 
+                    }}                
                 </div>
                 <div class=\"modal-footer\">
                     <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Cerrar</button>
-                    <a href=\"{{ path('eliminar_taller', {
-                                    'idTaller': taller.id
-                            }) 
-                        }}\" class=\"btn verde-suave text-dark\"><b>Enviar</b></a>
+                    <input type=\"submit\" value=\"Enviar\" class=\"btn verde-suave text-dark font-weight-bold\"/>
                 </div>
+                {{ form_end(formulario_taller) }}
                 </div>
             </div>
         </div>

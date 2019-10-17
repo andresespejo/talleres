@@ -65,7 +65,10 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
     <body>
         <div class=\"container\">
             <nav class=\"navbar navbar-expand-md navbar-light verde-suave\">
-                <a href=\"#\" class=\"navbar-brand\" >
+                <a href=\"";
+        // line 13
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inicio");
+        echo "\" class=\"navbar-brand\" >
                     <img src=\"/images/letras_logo.png\" id=\"logo-cabecera\">
                 </a>
                 <button type=\"button\" class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\"#navbarCollapse\">
@@ -74,10 +77,20 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
 
                 <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">
                     <div class=\"navbar-nav ml-auto\">
-                        <a href=\"#\" class=\"nav-item nav-link active\">Inicio</a>
+                        <a href=\"";
+        // line 22
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inicio");
+        echo "\" class=\"nav-item nav-link ";
+        echo (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 22, $this->source); })()), "request", [], "any", false, false, false, 22), "pathinfo", [], "any", false, false, false, 22) == "/")) ? ("font-weight-bold") : ("font-weight-normal"));
+        echo "\">Inicio</a>
                         <a href=\"#\" class=\"nav-item nav-link\">Blog</a>
                         <a href=\"#\" class=\"nav-item nav-link\">Sobre Nosotras</a>
-                        <a href=\"#\" class=\"nav-item nav-link\">Contacto</a>
+                        <a href=\"";
+        // line 25
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contacto");
+        echo "\" class=\"nav-item nav-link ";
+        echo (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 25, $this->source); })()), "request", [], "any", false, false, false, 25), "pathinfo", [], "any", false, false, false, 25) == "/contacto")) ? ("font-weight-bold") : ("font-weight-normal"));
+        echo "\">Contacto</a>
 
 
                         
@@ -226,7 +239,7 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
 
     public function getDebugInfo()
     {
-        return array (  200 => 53,  182 => 33,  164 => 8,  145 => 7,  130 => 54,  128 => 53,  121 => 48,  114 => 45,  108 => 42,  105 => 41,  103 => 40,  99 => 39,  92 => 34,  90 => 33,  64 => 9,  62 => 8,  58 => 7,  54 => 6,  47 => 1,);
+        return array (  213 => 53,  195 => 33,  177 => 8,  158 => 7,  143 => 54,  141 => 53,  134 => 48,  127 => 45,  121 => 42,  118 => 41,  116 => 40,  112 => 39,  105 => 34,  103 => 33,  90 => 25,  82 => 22,  70 => 13,  64 => 9,  62 => 8,  58 => 7,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -243,7 +256,7 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
     <body>
         <div class=\"container\">
             <nav class=\"navbar navbar-expand-md navbar-light verde-suave\">
-                <a href=\"#\" class=\"navbar-brand\" >
+                <a href=\"{{ path('inicio') }}\" class=\"navbar-brand\" >
                     <img src=\"/images/letras_logo.png\" id=\"logo-cabecera\">
                 </a>
                 <button type=\"button\" class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\"#navbarCollapse\">
@@ -252,10 +265,10 @@ class __TwigTemplate_7ea38fe7943069d6440cbee4222f861c5fe74fcd459b0151072aaaf44d6
 
                 <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">
                     <div class=\"navbar-nav ml-auto\">
-                        <a href=\"#\" class=\"nav-item nav-link active\">Inicio</a>
+                        <a href=\"{{ path('inicio') }}\" class=\"nav-item nav-link {{ app.request.pathinfo == '/' ? 'font-weight-bold' : 'font-weight-normal' }}\">Inicio</a>
                         <a href=\"#\" class=\"nav-item nav-link\">Blog</a>
                         <a href=\"#\" class=\"nav-item nav-link\">Sobre Nosotras</a>
-                        <a href=\"#\" class=\"nav-item nav-link\">Contacto</a>
+                        <a href=\"{{ path('contacto') }}\" class=\"nav-item nav-link {{ app.request.pathinfo == '/contacto' ? 'font-weight-bold' : 'font-weight-normal' }}\">Contacto</a>
 
 
                         

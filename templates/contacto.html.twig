@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contacta Con Nosotras{% endblock %}
+
+{% block body %}
+<div class="bg-white pt-5 pb-5 text-center">
+    {{ form_start(formulario_contacto, {'attr': {'class': 'fondo-gris-suave borde-redondeado text-center inline p-4'} }) }}
+    <h1 class="h3 mb-3 font-weight-bold">Contacta Con Nosotras</h1>
+    {{ form_widget(formulario_contacto.email, {
+        'attr' : {
+            'class' : 'form-control',
+            'placeholder' : 'Tu Email'
+        }
+        })
+    }}
+    <br>
+    {{ form_widget(formulario_contacto.comentario, {
+        'attr' : {
+            'class' : 'form-control',
+            'placeholder' : 'Tu Consulta',
+            'rows' : 10
+        }
+        })
+    }}
+    <br>
+    <input type="submit" value="Enviar" class="btn verde-suave text-dark font-weight-bold btn-block"/>
+    {{ form_end(formulario_contacto) }}
+</div>
+{% endblock %}

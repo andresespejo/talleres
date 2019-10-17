@@ -10,7 +10,7 @@
     <body>
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light verde-suave">
-                <a href="#" class="navbar-brand" >
+                <a href="{{ path('inicio') }}" class="navbar-brand" >
                     <img src="/images/letras_logo.png" id="logo-cabecera">
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -19,10 +19,10 @@
 
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="#" class="nav-item nav-link active">Inicio</a>
+                        <a href="{{ path('inicio') }}" class="nav-item nav-link {{ app.request.pathinfo == '/' ? 'font-weight-bold' : 'font-weight-normal' }}">Inicio</a>
                         <a href="#" class="nav-item nav-link">Blog</a>
                         <a href="#" class="nav-item nav-link">Sobre Nosotras</a>
-                        <a href="#" class="nav-item nav-link">Contacto</a>
+                        <a href="{{ path('contacto') }}" class="nav-item nav-link {{ app.request.pathinfo == '/contacto' ? 'font-weight-bold' : 'font-weight-normal' }}">Contacto</a>
 
 
                         

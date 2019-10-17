@@ -20,6 +20,7 @@ return [
     'eliminar_taller' => [['idTaller'], ['_controller' => 'App\\Controller\\DashboardController::eliminar'], [], [['variable', '/', '[^/]++', 'idTaller', true], ['text', '/dashboard/eliminar']], [], []],
     'dashboard' => [[], ['_controller' => 'App\\Controller\\DashboardController::index'], [], [['text', '/dashboard']], [], []],
     'inicio' => [[], ['_controller' => 'App\\Controller\\DefaultController::index'], [], [['text', '/']], [], []],
+    'contacto' => [[], ['_controller' => 'App\\Controller\\DefaultController::contacto'], [], [['text', '/contacto']], [], []],
     'articulo_nuevo' => [[], ['_controller' => 'App\\Controller\\DefaultController::salvar'], [], [['text', '/salvar/articulo']], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
     'logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
